@@ -104,8 +104,10 @@
 (setq org-outline-path-complete-in-steps t)
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
-              (sequence "WAITING(w@/!)" "SOMEDAY(S)" "PROJECT(P@)" "|" "CANCELLED(c@/!)"))))
+      (quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d)")
+              (sequence "WAITING(w)" "SOMEDAY(S)" "PROJECT(P)" "|" "CANCELLED(c)"))))
+      ;;(quote ((sequence "TODO(t)" "STARTED(s)" "|" "DONE(d!/!)")
+      ;;        (sequence "WAITING(w@/!)" "SOMEDAY(S)" "PROJECT(P@)" "|" "CANCELLED(c@/!)"))))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

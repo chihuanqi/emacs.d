@@ -1,5 +1,7 @@
 (global-linum-mode t)
 
+(setq linum-format "%d  ")
+
 ;; http://stackoverflow.com/questions/3875213/turning-on-linum-mode-when-in-python-c-mode
 (setq linum-mode-inhibit-modes-list '(eshell-mode
                                       shell-mode
@@ -35,10 +37,12 @@
                                       speedbar-mode
                                       gnus-summary-mode
                                       gnus-article-mode
-                                      calendar-mode))
+                                      calendar-mode
+									  python-mode))
 (defadvice linum-on (around linum-on-inhibit-for-modes)
            "Stop the load of linum-mode for some major modes."
-           (unless (member major-mode linum-mode-inhibit-modes-list)
-             ad-do-it))
+           ;;(unless (member major-mode linum-mode-inhibit-modes-list)
+           ;;  ad-do-it))
+			ad-do-it)
 (ad-activate 'linum-on)
 (provide 'init-linum-mode)
