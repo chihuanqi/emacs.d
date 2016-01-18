@@ -1,6 +1,6 @@
 (global-linum-mode t)
 
-(setq linum-format "%d  ")
+(setq linum-format "%4d ")
 
 ;; http://stackoverflow.com/questions/3875213/turning-on-linum-mode-when-in-python-c-mode
 (setq linum-mode-inhibit-modes-list '(eshell-mode
