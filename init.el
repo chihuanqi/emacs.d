@@ -75,20 +75,20 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 (require 'init-sessions)
 (require 'init-git)
 (require 'init-crontab)
-(require 'init-markdown)
-(require 'init-erlang)
-(require 'init-javascript)
+;;(require 'init-markdown)
+;;(require 'init-erlang)
+;;(require 'init-javascript)
 (require 'init-org)
 (require 'init-org-mime)
-(require 'init-css)
+;;(require 'init-css)
 (require 'init-python-mode)
-(require 'init-haskell)
-(require 'init-ruby-mode)
-(require 'init-lisp)
-(require 'init-elisp)
+;;(require 'init-haskell)
+;;(require 'init-ruby-mode)
+;;(require 'init-lisp)
+;;(require 'init-elisp)
 (require 'init-yasnippet)
 ;; Use bookmark instead
-(require 'init-zencoding-mode)
+;;(require 'init-zencoding-mode)
 (require 'init-cc-mode)
 (require 'init-gud)
 (require 'init-linum-mode)
@@ -97,21 +97,21 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 (require 'init-gtags)
 ;; use evil mode (vi key binding)
 (require 'init-evil)
-(require 'init-sh)
+;;(require 'init-sh)
 (require 'init-ctags)
 (require 'init-bbdb)
 (require 'init-gnus)
-(require 'init-lua-mode)
+;;(require 'init-lua-mode)
 (require 'init-workgroups2)
 (require 'init-term-mode)
-(require 'init-web-mode)
+;;(require 'init-web-mode)
 (require 'init-slime)
 (require 'init-clipboard)
 (require 'init-company)
-(require 'init-chinese-pyim) ;; cannot be idle-required
+;;(require 'init-chinese-pyim) ;; cannot be idle-required
 ;; need statistics of keyfreq asap
 (require 'init-keyfreq)
-(require 'init-httpd)
+;;(require 'init-httpd)
 
 ;; projectile costs 7% startup time
 
@@ -131,9 +131,9 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
                              init-fonts
                              init-hs-minor-mode
                              init-textile
-                             init-csv
+                             ;;init-csv
                              init-writting
-                             init-doxygen
+                             ;;init-doxygen
                              init-pomodoro
                              init-emacspeak
                              init-artbollocks-mode
