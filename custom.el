@@ -15,4 +15,5 @@
 		  (lambda ()
 			(define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
 			))
+
 ;;(global-set-key "\C-," 'pop-tag-mark)

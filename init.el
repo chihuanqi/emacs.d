@@ -1,5 +1,6 @@
 ;; -*- coding: utf-8 -*-
-
+;;测试测试
+;;abcdefgh
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
@@ -119,19 +120,10 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 (require 'init-misc)
 
 ;; comment below line if you want to setup color theme in your own way
-;(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+;;solarized theme config
+;;(set-frame-parameter nil 'background-mode 'dark)
 ;;(load-theme 'solarized t)
-;;(require 'color-theme-sanityinc-solarized)
-;;(color-theme-sanityinc-solarized)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
-(load-theme 'solarized t)
-(add-hook 'after-make-frame-functions
-          (lambda (frame)
-            ;;(let ((mode (if (display-graphic-p frame) 'light 'dark)))
-            (let ((mode (if (display-graphic-p frame) 'dark 'dark)))
-              (set-frame-parameter frame 'background-mode mode)
-              (set-terminal-parameter frame 'background-mode mode))
-            (enable-theme 'solarized)))
 
 (require 'init-emacs-w3m)
 (require 'init-hydra)
@@ -166,21 +158,6 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 ;; It's dependent on init-site-lisp.el
 (if (file-exists-p "~/.emacs.d/custom.el") (load-file "~/.emacs.d/custom.el"))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(bmkp-last-as-first-bookmark-file "/home/cb/.emacs.bmk")
- '(git-gutter:handled-backends (quote (svn hg git)))
- '(safe-local-variable-values (quote ((lentic-init . lentic-orgel-org-init))))
- '(session-use-package t nil (session)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(window-numbering-face ((t (:foreground "DeepPink" :underline "DeepPink" :weight bold))) t))
 ;;; Local Variables:
 ;;; no-byte-compile: t
 ;;; End:

@@ -119,6 +119,8 @@ ARCHIVE is the string name of the package archive.")
     fakir
     erlang
     company-c-headers
+	;;font
+	chinese-fonts-setup
     ;; make all the color theme packages available
     afternoon-theme
     define-word
@@ -298,5 +300,7 @@ ARCHIVE is the string name of the package archive.")
 (require-package 'define-word)
 (require-package 'quack) ;; for scheme
 (require-package 'hydra)
+;;(require-package 'color-theme-solarized)
+(require-package 'chinese-fonts-setup)
 
 (provide 'init-elpa)
