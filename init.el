@@ -119,7 +119,19 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 (require 'init-misc)
 
 ;; comment below line if you want to setup color theme in your own way
-(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+;(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+;;(load-theme 'solarized t)
+;;(require 'color-theme-sanityinc-solarized)
+;;(color-theme-sanityinc-solarized)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(load-theme 'solarized t)
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            ;;(let ((mode (if (display-graphic-p frame) 'light 'dark)))
+            (let ((mode (if (display-graphic-p frame) 'dark 'dark)))
+              (set-frame-parameter frame 'background-mode mode)
+              (set-terminal-parameter frame 'background-mode mode))
+            (enable-theme 'solarized)))
 
 (require 'init-emacs-w3m)
 (require 'init-hydra)
@@ -152,7 +164,7 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 
 ;; my personal setup, other major-mode specific setup need it.
 ;; It's dependent on init-site-lisp.el
-(if (file-exists-p "~/.custom.el") (load-file "~/.custom.el"))
+(if (file-exists-p "~/.emacs.d/custom.el") (load-file "~/.emacs.d/custom.el"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

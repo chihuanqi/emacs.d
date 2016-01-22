@@ -14,7 +14,7 @@
 
 (adjust-major-mode-keymap-with-evil "git-timemachine")
 (adjust-major-mode-keymap-with-evil "browse-kill-ring")
-(adjust-major-mode-keymap-with-evil "etags-select")
+;;(adjust-major-mode-keymap-with-evil "etags-select")
 
 (require 'evil)
 
@@ -268,7 +268,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
         (magit-commit-mode . normal)
         (magit-diff-mode . normal)
         (browse-kill-ring-mode . normal)
-        (etags-select-mode . normal)
+        ;;(etags-select-mode . normal)
         (js2-error-buffer-mode . emacs)
         )
       do (evil-set-initial-state mode state))
