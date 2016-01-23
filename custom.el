@@ -6,6 +6,8 @@
             (setq indent-tabs-mode t)))
 
 (require 'evil-fcitx)
+;;config gui mono font
+(require 'chinese-fonts-setup)
 
 (setq org-log-done nil)
 

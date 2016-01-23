@@ -12,7 +12,7 @@ The pixel size of the frame is kept (approximately) the same.
 DELTA should be a multiple of 10, in the units used by the
 :height face attribute."
   (let* ((new-height (+ (face-attribute 'default :height) delta))
-         (new-point-height (/ new-height 14)))
+         (new-point-height (/ new-height 10)))
     (dolist (f (frame-list))
       (with-selected-frame f
         ;; Latest 'set-frame-font supports a "frames" arg, but
@@ -25,10 +25,10 @@ DELTA should be a multiple of 10, in the units used by the
 
 (defun increase-default-font-height ()
   (interactive)
-  (increment-defau3t-font-height 14))
+  (increment-defau3t-font-height 10))
 
 (defun decrease-default-font-height ()
   (interactive)
-  (increment-default-font-height -14))
+  (increment-default-font-height -10))
 
 (provide 'init-fonts)

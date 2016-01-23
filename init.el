@@ -1,6 +1,5 @@
 ;; -*- coding: utf-8 -*-
-;;测试测试
-;;abcdefgh
+
 (setq emacs-load-start-time (current-time))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
@@ -120,10 +119,16 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 (require 'init-misc)
 
 ;; comment below line if you want to setup color theme in your own way
-(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
-;;solarized theme config
-;;(set-frame-parameter nil 'background-mode 'dark)
-;;(load-theme 'solarized t)
+;; console use default molokai theme and gui use solarized theme
+(if (display-graphic-p)
+    (progn
+    ;; if graphic
+		(set-frame-parameter nil 'background-mode 'dark)
+		(load-theme 'solarized t)
+      )
+    ;; else (optional)
+		(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+    )
 
 (require 'init-emacs-w3m)
 (require 'init-hydra)
