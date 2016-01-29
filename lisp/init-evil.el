@@ -286,8 +286,8 @@ If the character before and after CH is space or tab, CH is NOT slash"
 (define-key evil-normal-state-map (kbd "M-y") 'browse-kill-ring)
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
-(define-key evil-normal-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
-(define-key evil-visual-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
+;;(define-key evil-normal-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
+;;(define-key evil-visual-state-map (kbd "C-]") 'etags-select-find-tag-at-point)
 
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
@@ -337,9 +337,9 @@ If the character before and after CH is space or tab, CH is NOT slash"
   "sc" 'shell-command
   "ee" 'eval-expression
   "aa" 'copy-to-x-clipboard ; used frequently
+  "zz" 'paste-from-x-clipboard ; used frequently
   "aw" 'ace-swap-window
   "af" 'ace-maximize-window
-  "zz" 'paste-from-x-clipboard ; used frequently
   "cy" 'strip-convert-lines-into-one-big-string
   "bs" '(lambda () (interactive) (goto-edge-by-comparing-font-face -1))
   "es" 'goto-edge-by-comparing-font-face

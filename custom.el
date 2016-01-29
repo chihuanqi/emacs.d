@@ -18,4 +18,7 @@
 			(define-key evil-normal-state-map (kbd "C-]") 'ggtags-find-tag-dwim)
 			))
 
+;;auto detect file encode
+(prefer-coding-system 'chinese-gbk)
+(prefer-coding-system 'utf-8)
 ;;(global-set-key "\C-," 'pop-tag-mark)
