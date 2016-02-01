@@ -205,8 +205,8 @@ If the character before and after CH is space or tab, CH is NOT slash"
 ;; }}
 
 ;; {{ evil-space
-(require 'evil-space)
-(evil-space-mode)
+;;(require 'evil-space)
+;;(evil-space-mode)
 ;; }}
 
 ;; Move back the cursor one position when exiting insert mode
@@ -485,6 +485,7 @@ If the character before and after CH is space or tab, CH is NOT slash"
   "fa" 'flyspell-auto-correct-word
   "pe" 'flymake-goto-prev-error
   "ne" 'flymake-goto-next-error
+  "er" 'flymake-display-err-menu-for-current-line
   "fw" 'ispell-word
   "bc" '(lambda () (interactive) (wxhelp-browse-class-or-api (thing-at-point 'symbol)))
   "ma" 'mc/mark-all-like-this-in-defun

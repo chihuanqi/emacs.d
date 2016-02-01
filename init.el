@@ -121,13 +121,18 @@ We increase this to 16MB by `(my-optimize-gc 16 0.5)` "
 ;; comment below line if you want to setup color theme in your own way
 ;; console use default molokai theme and gui use solarized theme
 (if (display-graphic-p)
+	;; if graphic
     (progn
-    ;; if graphic
 		(set-frame-parameter nil 'background-mode 'dark)
 		(load-theme 'solarized t)
       )
     ;; else (optional)
-	(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
+    (progn
+		(setq solarized-termcolors 256)
+		(set-terminal-parameter nil 'background-mode 'dark)
+		(load-theme 'solarized t)
+      )
+	;;(if (or (display-graphic-p) (string-match-p "256color"(getenv "TERM"))) (require 'init-color-theme))
 )
 
 (require 'init-emacs-w3m)

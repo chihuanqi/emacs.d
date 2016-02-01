@@ -22,3 +22,6 @@
 (prefer-coding-system 'chinese-gbk)
 (prefer-coding-system 'utf-8)
 ;;(global-set-key "\C-," 'pop-tag-mark)
+
+(define-key evil-normal-state-map (kbd "SPC") 'evil-scroll-page-down)
+;;(define-key evil-normal-state-map (kbd "S-SPC") 'evil-scroll-page-up)
